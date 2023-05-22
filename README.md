@@ -40,10 +40,8 @@ As I was unsure I repeated question 6-15 with the bootcamp spot question with th
 
 ## Summary.
 
-In both examples of completing a run time on a query of home-sales (Question 6-15)
-the temporay table query was slower than the cached query, which is expected when the table is stored in computer memory.
-The parquet and partitioned data was quicker then both queries.
+When comparing the run time on a query of home-sales (Question 6-15) on the temporay table created the cached table query was quicker. One would expect this to occur with the data being loaded from computer memory rather than from distributed nodes.
 
-One would expect this to be the case i.e. the run time for the cached data to be quicker then uncached data, and the parquet and partitioned data on "date_built" to be quick as the process of partitioning data across distributed nodes should be quicker.
+The parquet and partitioned, on "date_built" column, was loaded across more distributed nodes and generated an even quicker run time for the query.
 
 ### Enjoy marking! Sandra
